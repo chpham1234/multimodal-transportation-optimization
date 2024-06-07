@@ -383,8 +383,8 @@ def transform(filePath):
 
 if __name__ == '__main__':
     order, route = transform("model data.xlsx")
-    m = MMT()
-    # m = MMT(framework='CVXPY') # for open source framework
+    # m = MMT()
+    m = MMT(framework='CVXPY') # for open source framework
     m.set_param(route, order)
     m.build_model()
     m.solve_model()
